@@ -28,9 +28,19 @@ var isOneBitCharacter = function(bits) {
         }
         else{
             i+=1;
-            
+
         }
     }
     return i == len;
 };
 console.log(isOneBitCharacter(bits));
+/*
+思路：
+定义一个变量len = 数组长度 -1
+因为最后一位肯定是零，所以不用管
+定义变量i，用来记录已确认过的数组元素，开始循环
+当i<l时，如果bits[i]==1,那么该字符肯定是2bit字符，i+=2;
+如果不是1，那么只能是0，该字符是1bit字符，i+=1;
+完成循环之后，如果i==l，说明最后一个字符是1bit的字符，返回ture，
+反之则为false
+*/
