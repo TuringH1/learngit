@@ -36,7 +36,7 @@ var arr =[1,1,2];
     if (nums.length<=1) {
         return nums.length;
     }
-    var p =0;
+    var p =0;//记录不重复数组元素的个数
     for(var i=p+1 ; i<nums.length ; i++){
         if (nums[p]==nums[i]) {
             continue;
