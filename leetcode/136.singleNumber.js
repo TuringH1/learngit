@@ -32,3 +32,17 @@ console.log(singleNumber(arr));
 所有出现两次的数字都会抵消成0
 结果就是只出现一次的数字
  */
+
+var singleNumber1 = function(nums) {
+   var seen = []
+   for (var i = 0; i < nums.length; i++) {
+       var num = nums[i]
+       var idx = seen.indexOf(num)
+       if (idx >= 0) {
+           seen.splice(idx, 1)
+       } else {
+           seen.push(num)
+       }
+   }
+   return seen[0]
+};
